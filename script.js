@@ -1,24 +1,13 @@
-let name="Gianna";
+let count=0;
 
-function greet(name) {
-    return "Hello, " + name + "!"
-}
+const countDisplay=document.getElementById("count");
 
-let person = {
-    name:"Gianna",
-    age: 19,
-    role: "Developer",
-    active: true
-}
+document.getElementById("plus").addEventListener("click", () => {
+    count++;
+    countDisplay.textCOntent=count;
+});
 
-console.log(greet(person.name));
-console.log(person);
-
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (let i=0; i<numbers.length; i++) {
-    if (numbers[i] % 2 === 0) {
-        console.log(numbers[i] + " is even");
-    } else {
-        console.log(numbers[i] + " is odd");
-    }
-}
+document.getElementById("minus").addEventListener("click", () => {
+    count--;
+    countDisplay.textCOntent=count;
+});
